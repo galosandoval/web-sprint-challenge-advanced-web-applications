@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { axiosWithAuth } from "../utils/axiosWithAuth";
-import { useParams, useHistory } from "react-router-dom";
 
 const initialColor = {
   color: "",
@@ -9,7 +8,6 @@ const initialColor = {
 };
 
 const ColorList = ({ colors, updateColors, fetchBubbles }) => {
-  const history = useHistory();
 
 
   console.log(colors);
@@ -44,7 +42,6 @@ const ColorList = ({ colors, updateColors, fetchBubbles }) => {
       fetchBubbles();
     })
     .catch((err) => err);
-  history.push("/bubble-page");
   };
 
   return (
